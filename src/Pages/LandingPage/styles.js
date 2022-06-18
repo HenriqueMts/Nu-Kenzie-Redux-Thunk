@@ -7,6 +7,7 @@ export const Container = styled.section`
   background-color: #212529;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   div {
     margin-top: 60%;
     width: 60%;
@@ -55,7 +56,7 @@ export const Container = styled.section`
     justify-content: space-evenly;
     div {
       margin-top: 0;
-      width: 30%;
+      width: 28%;
       height: auto;
       align-items: flex-start;
       display: flex;
@@ -79,7 +80,7 @@ export const Container = styled.section`
         color: #fff;
         margin-top: 20%;
         width: 80%;
-        height: 36px;
+        height: 40px;
         border-radius: 8px;
       }
     }
