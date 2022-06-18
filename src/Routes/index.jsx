@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import Home from "../Pages/Home";
 import LandingPage from "../Pages/LandingPage";
 const Routes = () => {
   return (
@@ -6,7 +7,9 @@ const Routes = () => {
       <Route exact path="/">
         <LandingPage />
       </Route>
-      <Route path="/page"></Route>
+      <Route path="/home">
+        <Home />
+      </Route>
     </Switch>
   );
 };
