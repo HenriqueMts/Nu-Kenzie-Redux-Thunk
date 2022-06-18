@@ -43,6 +43,8 @@ export const Container = styled.section`
       -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
       -moz-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
       transition: 0.6s ease;
+      border: 2px solid #03b898;
+      background-color: #03b898;
     }
   }
   aside {
@@ -64,13 +66,13 @@ export const Container = styled.section`
 
       h3 {
         margin-top: 15%;
-        margin-top: 0;
+
         text-align: start;
         font-size: 2rem;
         color: #fff;
       }
       span {
-        margin-top: 15%;
+        margin-top: 8%;
         color: #fff;
         font-size: 0.8rem;
       }
