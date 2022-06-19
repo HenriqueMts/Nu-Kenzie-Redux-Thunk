@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { addTransaction } from "../../Store/Modules/listTransactions/actions";
+import { useSelector, useDispatch } from "react-redux";
+
+import { addTransactionThunk } from "../../Store/Modules/listTransactions/thunks";
+
 const Form = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -21,7 +22,7 @@ const Form = () => {
       preco: price,
       tipo: type,
     };
-    dispatch(addTransaction(trasaction));
+    dispatch(addTransactionThunk(trasaction));
   };
   return (
     <form

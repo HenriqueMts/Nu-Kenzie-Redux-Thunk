@@ -1,16 +1,17 @@
 import { ADD_TRANSACTION, REMOVE_TRANSACTION } from "./actionType";
 
-const listReducer = (state = [], action) => {
+const inicialState = JSON.parse(localStorage.getItem("transactions")) || [];
+
+const listReducer = (state = inicialState, action) => {
   switch (action.type) {
     case ADD_TRANSACTION:
       const { transaction } = action;
       return [...state, transaction];
 
     case REMOVE_TRANSACTION:
-      const { id } = action;
-      const newList = state.filter((transaction) => transaction.id !== id);
-
-      return newList;
+      const { list } = action;
+      console.log(list);
+      return list;
 
     default:
       return state;
