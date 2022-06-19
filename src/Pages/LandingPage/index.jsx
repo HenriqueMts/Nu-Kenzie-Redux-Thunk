@@ -13,9 +13,9 @@ const LandingPage = () => {
         <h1>
           <img src={Logo} alt="Logo" />
         </h1>
-        <h3>Centralize o controle das suas finanças</h3>
-        <span>de forma rápida e segura</span>
-        <button onClick={() => history.push("/home")}>Entrar</button>
+        <h3>Centralize control of your finances</h3>
+        <span>in a fast and secure way</span>
+        <button onClick={() => history.push("/home")}>Start</button>
       </div>
       <aside>
         <img src={LandingImg} alt="Ilustrative" />
