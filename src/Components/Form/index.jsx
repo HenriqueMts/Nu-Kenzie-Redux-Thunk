@@ -1,19 +1,27 @@
 import { useState } from "react";
+
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addTransaction } from "../../Store/Modules/listTransactions/actions";
 const Form = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [type, setType] = useState("");
+  const list = useSelector((store) => store.list);
+  const dispatch = useDispatch();
 
   const createListTransition = () => {
     let NewId;
 
-    const obj = {
+    list.length < 1 ? (NewId = 1) : (NewId = list.length + 1);
+
+    const trasaction = {
       id: NewId,
       descricao: description,
       preco: price,
       tipo: type,
     };
-    console.log(obj);
+    dispatch(addTransaction(trasaction));
   };
   return (
     <form
