@@ -15,7 +15,10 @@ const Form = () => {
 
   const schema = yup.object().shape({
     descricao: yup.string().required("Required Field"),
-    preco: yup.number("Please just numbers").required("Campo Obrigatório"),
+    preco: yup
+      .number()
+      .required()
+      .typeError("Required Field, please just numbers"),
     tipo: yup.string().required("Required field"),
   });
 
@@ -39,10 +42,7 @@ const Form = () => {
   };
   return (
     <Container>
-      <form
-        className="form--content"
-        onSubmit={handleSubmit(createListTransition)}
-      >
+      <form onSubmit={handleSubmit(createListTransition)}>
         <label>Description</label>
         <input
           className="description--input"
@@ -61,15 +61,14 @@ const Form = () => {
               placeholder="$"
             />
           </label>
-          {errors.descricao && (
-            <span className="error--mensage">{errors.descricao.message}</span>
+          {errors.preco && (
+            <span className="error--mensage">{errors.preco.message}</span>
           )}
           <label>
             Type of Value
             <select className="price--type" {...register("tipo")}>
-              <option value="" disabled selected></option>
               <option value="Deposit">Deposit</option>
-              <option value="Output">Output</option>
+              <option value="Output">Withdrawn</option>
             </select>
           </label>
           {errors.tipo && (
