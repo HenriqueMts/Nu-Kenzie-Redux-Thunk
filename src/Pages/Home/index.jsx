@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import Logo from "../../Assets/HomeLogo.png";
 import Form from "../../Components/Form";
 import TransactionsList from "../../Components/TransactionsList";
+import TotalMoney from "../../Components/TotalMoney";
 
 const Home = () => {
   const history = useHistory();
@@ -18,6 +19,7 @@ const Home = () => {
         <Form />
         <TransactionsList />
       </Content>
+      <TotalMoney />
     </Container>
   );
 };
