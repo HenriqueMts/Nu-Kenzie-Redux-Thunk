@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container, Content, Header } from "./styles";
 import { useHistory } from "react-router-dom";
 import Logo from "../../Assets/HomeLogo.png";
 import Form from "../../Components/Form";
@@ -8,15 +8,16 @@ const Home = () => {
   const history = useHistory();
   return (
     <Container>
-      <header>
+      <Header>
         <h1>
           <img src={Logo} alt="Logo" />
         </h1>
         <button onClick={() => history.push("/")}>Home</button>
-      </header>
-
-      <Form />
-      <TransactionsList />
+      </Header>
+      <Content>
+        <Form />
+        <TransactionsList />
+      </Content>
     </Container>
   );
 };
