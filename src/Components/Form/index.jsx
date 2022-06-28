@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -19,7 +17,7 @@ const Form = () => {
       .number()
       .required()
       .typeError("Required Field, please just numbers"),
-    tipo: yup.string().required("Required field"),
+    tipo: yup.string().required(),
   });
 
   const {
@@ -61,20 +59,16 @@ const Form = () => {
               placeholder="$"
             />
           </label>
-          {errors.preco && (
-            <span className="error--mensage">{errors.preco.message}</span>
-          )}
-          <label>
-            Type of Value
-            <select className="price--type" {...register("tipo")}>
-              <option value="Deposit">Deposit</option>
-              <option value="Output">Withdrawn</option>
-            </select>
-          </label>
-          {errors.tipo && (
-            <span className="error--mensage">{errors.tipo.message}</span>
-          )}
+
+          <label>Type of Value</label>
+          <select className="price--type" {...register("tipo")}>
+            <option value="Deposit">Deposit</option>
+            <option value="Output">Withdrawn</option>
+          </select>
         </div>
+        {errors.preco && (
+          <span className="error--mensage">{errors.preco.message}</span>
+        )}
         <button>Send Trasaction</button>
       </form>
     </Container>
