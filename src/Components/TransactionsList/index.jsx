@@ -29,7 +29,7 @@ const TransactionsList = () => {
                 </button>
               </div>
             </section>
-            <ul>
+            <section>
               {list
                 .filter((transaction) =>
                   buttonFilter === "All"
@@ -37,12 +37,14 @@ const TransactionsList = () => {
                     : transaction.tipo === buttonFilter
                 )
                 .map((transaction) => (
-                  <TransactionCard
-                    key={transaction.id}
-                    transaction={transaction}
-                  />
+                  <ul>
+                    <TransactionCard
+                      key={transaction.id}
+                      transaction={transaction}
+                    />
+                  </ul>
                 ))}
-            </ul>
+            </section>
           </Container>
         </>
       ) : (
