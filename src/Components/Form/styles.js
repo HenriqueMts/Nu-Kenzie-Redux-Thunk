@@ -6,24 +6,85 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  form {
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border: 2px solid #868e96;
+`;
+export const Content = styled.form`
+  gap: 12px;
+  margin-top: 10%;
+  border-radius: 4px;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #868e96;
 
-    label {
-      font-size: 0.8rem;
-    }
+  .description--input {
+    margin-left: 6%;
+    border-radius: 6px;
+    background: #f8f9fa;
+    border: 3px solid #f8f9fa;
+    height: 42px;
+    width: 80%;
 
-    span {
-      font-size: 0.7rem;
-      color: #fd377e;
+    ::placeholder {
+      color: #868e96;
     }
   }
-  .price--content {
-    display: flex;
+  label {
+    font-size: 0.9rem;
+    padding-left: 8px;
+    margin-top: 10%;
+  }
+
+  span {
+    font-size: 0.7rem;
+    color: #fd377e;
+    margin-left: 8%;
+  }
+
+  button {
+    margin: 0 auto;
+    width: 80%;
+    height: 42px;
+    margin-top: 8%;
+    background-color: #fd377e;
+    border: #fd377e;
+    border-radius: 8px;
+    color: #fff;
+  }
+`;
+export const PriceContent = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 3%;
+  margin-top: 10%;
+  gap: 12px;
+  input {
+    width: 112px;
+    margin-top: 8%;
+    margin-left: 6%;
+    border-radius: 6px;
+    background: #f8f9fa;
+    border: 3px solid #f8f9fa;
+    height: 42px;
+
+    ::placeholder {
+      color: #868e96;
+    }
+  }
+  select {
+    width: 112px;
+    margin-top: 8%;
+    margin-left: 6%;
+    border-radius: 6px;
+    background: #f8f9fa;
+    border: 3px solid #f8f9fa;
+    height: 50px;
+    color: #868e96;
+  }
+  label {
+    font-size: 0.9rem;
+    padding-left: 8px;
+    margin-top: 10%;
   }
 `;

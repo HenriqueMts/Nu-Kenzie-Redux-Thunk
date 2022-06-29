@@ -49,5 +49,7 @@ export const Header = styled.header`
 
 export const Content = styled.main`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 `;

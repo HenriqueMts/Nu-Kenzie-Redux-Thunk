@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useSelector, useDispatch } from "react-redux";
 
 import { addTransactionThunk } from "../../Store/Modules/listTransactions/thunks";
-import { Container } from "./styles";
+import { Container, Content, PriceContent } from "./styles";
 
 const Form = () => {
   const list = useSelector((store) => store.list);
@@ -40,7 +40,7 @@ const Form = () => {
   };
   return (
     <Container>
-      <form onSubmit={handleSubmit(createListTransition)}>
+      <Content onSubmit={handleSubmit(createListTransition)}>
         <label>Description</label>
         <input
           className="description--input"
@@ -50,27 +50,29 @@ const Form = () => {
         {errors.descricao && (
           <span className="error--mensage">{errors.descricao.message}</span>
         )}
-        <div className="price--content">
-          <label>
-            Value
+        <PriceContent>
+          <div>
+            <label>Value</label>
             <input
               className="price--input"
               {...register("preco")}
               placeholder="$"
             />
-          </label>
+          </div>
+          <div>
+            <label>Type of Value</label>
+            <select className="price--type" {...register("tipo")}>
+              <option value="Deposit">Deposit</option>
+              <option value="Output">Withdrawn</option>
+            </select>
+          </div>
+        </PriceContent>
 
-          <label>Type of Value</label>
-          <select className="price--type" {...register("tipo")}>
-            <option value="Deposit">Deposit</option>
-            <option value="Output">Withdrawn</option>
-          </select>
-        </div>
         {errors.preco && (
           <span className="error--mensage">{errors.preco.message}</span>
         )}
         <button>Send Trasaction</button>
-      </form>
+      </Content>
     </Container>
   );
 };
