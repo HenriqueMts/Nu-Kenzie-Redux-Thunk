@@ -28,4 +28,10 @@ export const Container = styled.div`
 `;
 export const Content = styled.ul`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 120px;
+  overflow-y: scroll;
 `;

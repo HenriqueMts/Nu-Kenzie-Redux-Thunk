@@ -29,7 +29,10 @@ const TransactionsList = () => {
               buttonFilter === "All" ? list : transaction.tipo === buttonFilter
             )
             .map((transaction) => (
-              <TransactionCard key={transaction.id} transaction={transaction} />
+              <TransactionCard
+                key={transaction.NewId}
+                transaction={transaction}
+              />
             ))}
         </Content>
       ) : (
