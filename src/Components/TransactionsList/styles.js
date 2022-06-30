@@ -23,6 +23,7 @@ export const Container = styled.div`
     background-color: #fd377e;
     border: #fd377e;
     color: #fff;
+    transition: 0.6s ease;
   }
 `;
 export const Content = styled.ul`
