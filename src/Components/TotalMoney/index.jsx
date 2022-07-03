@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
+import { Container } from "./styles";
 
 const TotalMoney = () => {
   const [totalMoney, SetTotalMoney] = useState(0);
@@ -21,10 +22,10 @@ const TotalMoney = () => {
   };
 
   return (
-    <div className={totalMoney < 0 ? "overdrawn--price" : "positive--price"}>
+    <Container total={totalMoney}>
       <h3>Total:</h3>
       <span> ${totalMoney} </span>
-    </div>
+    </Container>
   );
 };
 export default TotalMoney;
