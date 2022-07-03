@@ -53,11 +53,7 @@ const Form = () => {
         <PriceContent>
           <div>
             <label>Value</label>
-            <input
-              className="price--input"
-              {...register("preco")}
-              placeholder="$"
-            />
+            <input {...register("preco")} placeholder="$" />
           </div>
           <div>
             <label>Type of Value</label>

@@ -1,5 +1,11 @@
 import styled from "styled-components";
-
+export const Main = styled.main`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -36,8 +42,9 @@ export const Content = styled.ul`
   overflow-y: scroll;
 `;
 export const NoCardContent = styled.aside`
-  width: 90%;
+  margin: 0 auto;
+  width: 92%;
   img {
-    width: 90%;
+    width: 100%;
   }
 `;

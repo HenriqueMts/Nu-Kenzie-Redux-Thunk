@@ -52,4 +52,8 @@ export const Content = styled.main`
   flex-direction: column;
   align-items: center;
   width: 100%;
+
+  @media (min-width: 720px) {
+    flex-direction: row;
+  }
 `;

@@ -6,14 +6,14 @@ import NoCard from "../../Assets/NoCard.png";
 
 import TransactionCard from "../TransactionCard";
 
-import { Container, Content, NoCardContent } from "./styles";
+import { Container, Content, Main, NoCardContent } from "./styles";
 const TransactionsList = () => {
   const list = useSelector((store) => store.list);
 
   const [buttonFilter, setButtonFilter] = useState("All");
 
   return (
-    <>
+    <Main>
       <Container>
         <h3>Resumo Financeiro</h3>
         <div>
@@ -40,7 +40,7 @@ const TransactionsList = () => {
           <img src={NoCard} alt="No Card" />
         </NoCardContent>
       )}
-    </>
+    </Main>
   );
 };
 export default TransactionsList;
