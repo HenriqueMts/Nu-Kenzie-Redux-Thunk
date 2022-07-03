@@ -14,7 +14,9 @@ const TransactionCard = ({ transaction }) => {
       </Content>
 
       <p>{transaction.preco}$</p>
-      <button onClick={() => dispatch(removeTransactionThunk(transaction.id))}>
+      <button
+        onClick={() => dispatch(removeTransactionThunk(transaction.NewId))}
+      >
         <FaTrash />
       </button>
     </Container>
