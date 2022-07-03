@@ -13,7 +13,7 @@ export const addTransactionThunk = (transaction) => {
 export const removeTransactionThunk = (id) => {
   return (dispatch, getStore) => {
     const { list } = getStore();
-    const newList = list.filter((product) => product.id !== id);
+    const newList = list.filter((product) => product.NewId !== id);
 
     localStorage.setItem("transactions", JSON.stringify(newList));
 
