@@ -35,3 +35,9 @@ export const Content = styled.ul`
   max-height: 120px;
   overflow-y: scroll;
 `;
+export const NoCardContent = styled.aside`
+  width: 90%;
+  img {
+    width: 90%;
+  }
+`;

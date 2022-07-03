@@ -6,7 +6,7 @@ import NoCard from "../../Assets/NoCard.png";
 
 import TransactionCard from "../TransactionCard";
 
-import { Container, Content } from "./styles";
+import { Container, Content, NoCardContent } from "./styles";
 const TransactionsList = () => {
   const list = useSelector((store) => store.list);
 
@@ -36,9 +36,9 @@ const TransactionsList = () => {
             ))}
         </Content>
       ) : (
-        <aside>
+        <NoCardContent>
           <img src={NoCard} alt="No Card" />
-        </aside>
+        </NoCardContent>
       )}
     </>
   );
