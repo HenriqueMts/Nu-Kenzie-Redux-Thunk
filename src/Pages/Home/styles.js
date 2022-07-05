@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   width: 100%;
   height: 100vh;
+  gap: 16px;
 `;
 export const Header = styled.header`
   color: #f8f9fa;

@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.li`
   width: 80%;
-  margin-top: 5%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #e9ecef;
-  height: 68px;
+  min-height: 68px;
   border-left: 5px solid
     ${(props) => (props.type === "Deposit" ? "#03B898" : "#FD377E")};
   border-radius: 8px;

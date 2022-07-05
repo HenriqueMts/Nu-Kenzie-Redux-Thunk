@@ -5,6 +5,12 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (min-width: 720px) {
+    justify-content: space-around;
+    margin-top: 2%;
+    gap: 12px;
+    height: 60vh;
+  }
 `;
 export const Container = styled.div`
   display: flex;
@@ -13,6 +19,12 @@ export const Container = styled.div`
   text-align: center;
   margin-top: 10%;
   width: 100%;
+  @media (min-width: 720px) {
+    flex-direction: row;
+    align-items: center;
+    top: 0;
+    margin-top: 0;
+  }
 
   button {
     margin-top: 12px;
@@ -33,6 +45,7 @@ export const Container = styled.div`
   }
 `;
 export const Content = styled.ul`
+  gap: 12px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -40,10 +53,17 @@ export const Content = styled.ul`
   align-items: center;
   max-height: 120px;
   overflow-y: scroll;
+
+  @media (min-width: 720px) {
+    max-height: 60vh;
+  }
 `;
 export const NoCardContent = styled.aside`
   margin: 0 auto;
   width: 92%;
+  @media (min-width: 720px) {
+    width: 80%;
+  }
   img {
     width: 100%;
   }

@@ -57,7 +57,9 @@ export const Content = styled.form`
   }
 
   @media (min-width: 720px) {
-    width: 85%;
+    width: 380px;
+    height: 58vh;
+    margin-top: 0;
     .description--input {
       margin-left: 5%;
       border-radius: 6px;
