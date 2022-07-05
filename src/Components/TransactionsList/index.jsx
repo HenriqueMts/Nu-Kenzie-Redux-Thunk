@@ -15,7 +15,7 @@ const TransactionsList = () => {
   return (
     <Main>
       <Container>
-        <h3>Resumo Financeiro</h3>
+        <h3>Financials summary</h3>
         <div>
           <button onClick={() => setButtonFilter("All")}>All</button>
           <button onClick={() => setButtonFilter("Deposit")}>Deposits</button>
