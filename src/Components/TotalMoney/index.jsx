@@ -14,7 +14,7 @@ const TotalMoney = () => {
       .filter((transac) => transac.tipo === "Deposit")
       .reduce((prev, current) => current.preco + prev, 0);
     const sub = list
-      .filter((transac) => transac.tipo === "Output")
+      .filter((transac) => transac.tipo === "Withdrawn")
       .reduce((prev, current) => current.preco + prev, 0);
 
     const total = sum - sub;

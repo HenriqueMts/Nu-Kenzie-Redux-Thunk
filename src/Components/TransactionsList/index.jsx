@@ -19,7 +19,9 @@ const TransactionsList = () => {
         <div>
           <button onClick={() => setButtonFilter("All")}>All</button>
           <button onClick={() => setButtonFilter("Deposit")}>Deposits</button>
-          <button onClick={() => setButtonFilter("Output")}>Withdrawn</button>
+          <button onClick={() => setButtonFilter("Withdrawn")}>
+            Withdrawn
+          </button>
         </div>
       </Container>
       {list.length > 0 ? (

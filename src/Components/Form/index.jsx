@@ -59,7 +59,7 @@ const Form = () => {
             <label>Type of Value</label>
             <select className="price--type" {...register("tipo")}>
               <option value="Deposit">Deposit</option>
-              <option value="Output">Withdrawn</option>
+              <option value="Withdrawn">Withdrawn</option>
             </select>
           </div>
         </PriceContent>
