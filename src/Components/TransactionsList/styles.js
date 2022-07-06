@@ -51,7 +51,7 @@ export const Content = styled.ul`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-height: 120px;
+  max-height: 280px;
   overflow-y: scroll;
 
   @media (min-width: 720px) {
